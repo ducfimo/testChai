@@ -1,0 +1,20 @@
+{
+  "name": "testchai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "VietnameseString.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "jsdom": "^11.3.0",
+    "mocha": "^3.5.3",
+    "mongodb": "^2.2.31",
+    "object.entries": "^1.0.4",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2"
+  }
+}
