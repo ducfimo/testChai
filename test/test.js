@@ -1,6 +1,40 @@
+const fs = require('fs')
 const expect = require('chai').expect
+const sinon = require('sinon')
 
 const STR = require('../module/string')
+const getInformation = require('../module/getInformation')
+const mongodb = require('../module/mongodb')
+
+const OBJ14 = JSON.parse(fs.readFileSync(__dirname + '/missteen/obj14.json').toString())
+
+// Fake getInformation.getHTML()
+const BODY_14 = fs.readFileSync(__dirname + '/missteen/14.html').toString()
+const BODY_HOME = fs.readFileSync(__dirname + '/missteen/home.html').toString()
+let stub = sinon.stub(getInformation, 'getHTML')
+stub.withArgs(14).returns(Promise.resolve(BODY_14))
+stub.withArgs(13).returns(Promise.resolve(BODY_HOME))
+
+// fake mongodb.find()
+let stub1 = sinon.stub(mongodb, 'find')
+stub1.withArgs('missteen', 'thisinh', {SBD: 14}).returns(Promise.resolve([OBJ14]))
+
+// getInformation.readHTML()
+describe('readHTML()', () => {
+	it('should return 0', () => {
+		return getInformation.getHTML(13)
+		.then( body => {
+			expect(getInformation.readHTML(body)).to.equal(0)
+		})
+	})
+	it('should return an object', () => {
+		return getInformation.getHTML(14)
+		.then( body => {
+			expect(getInformation.readHTML(body)).to.be.an('object')
+			expect(getInformation.readHTML(body)).to.deep.equal(OBJ14)
+		})
+	})
+})
 
 // STR.standardize(string)
 describe('standardize()', () => {

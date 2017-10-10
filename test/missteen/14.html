@@ -1,0 +1,354 @@
+
+    <!DOCTYPE html>
+    <html class="show-popup" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="/Content/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&amp;subset=vietnamese" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,400i,500,700&amp;subset=vietnamese" rel="stylesheet">
+        <link rel="stylesheet" href="/Content/css/owl.carousel2.css">
+        <link rel="stylesheet" href="/Content/css/lightslider.css">
+        <link rel="stylesheet" href="/Content/css/jquery.mCustomScrollbar.css">
+        <link rel="stylesheet" href="/Content/css/style.css">
+
+        <title>L&#234; Th&#249;y Hương</title>
+        <link rel="icon" href="http://missteen.vn/Content/images/200x200-co-gai.png" style="width:32px;height:32px;">
+        <meta name="Keywords" content="Missteen, Missteen Vietnam, Miss teen Vietnam, Miss tên Viet nam, Missteen 2017, Miss teen 2017, Miss teen" />
+        <meta name="Description" content='L&#234; Th&#249;y Hương, SBD 000014, Đồng Th&#225;p' />
+        <meta property="og:title" content="L&#234; Th&#249;y Hương" />
+        <meta property="og:description" content='L&#234; Th&#249;y Hương, SBD 000014, Đồng Th&#225;p' />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Miss Teen 2017" />
+        <meta property="og:url" content="http://missteen.vn/thisinh-14" />
+        <meta property="og:image" content="http://media.missteen.vn/images/Thumb_26052017120221_IMG_20170512_154801_045.jpg" />
+        <meta property="og:image:type" content="image/jpeg">
+        <meta property="og:image:width" content="600">
+        <meta property="og:image:height" content="315">
+        <meta property="fb:app_id" content="424754621250874" />
+        <link href="http://missteen.vn/Content/css/swiper.min.css" rel="stylesheet" />
+        <link href="http://missteen.vn/Content/css/owl.carousel.min.css" rel="stylesheet" />
+        <script src="http://missteen.vn/Content/js/common.js"></script>
+        <script>
+            var appPath = 'http://missteen.vn/';
+            var pos = '';
+            var miss = '';
+            var page_content = '';
+            var id_chk = '0';
+            var key = '';
+            fbAppId = '424754621250874';
+            fbAppSecret = '63b4c7f92edccfab827024007523b154';
+            var url_back = document.referrer;
+            if (!url_back) url_back = appPath + 'danh-sach-thi-sinh';
+        </script>
+
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-69155076-37', 'auto');
+            ga('send', 'pageview');
+        </script>
+
+        <style>
+            .fb-comments, .fb-comments iframe[style], .fb-like-box, .fb-like-box iframe[style], .fb-comments span, .fb-comments iframe span[style], .fb-like-box span, .fb-like-box iframe span[style] {
+                width: 100% !important;
+            }
+        </style>
+    </head>
+    <body class="height no-pd" ng-controller="MainCtrl">
+        <input type="text" id="miss_sign" value="1ad81452f3539c8cb85d654b6cae4ba3" hidden />
+        <div id="fb-root"></div>
+        <script>
+            (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9&appId=" + fbAppId;
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+        <script>
+            window.onload = function () {
+                var sign = $('#miss_sign').val();
+                var antiforgerytoken = $('input[name=__RequestVerificationToken]').val();
+                FB.Event.subscribe("edge.create", function (o) {
+                    var input = {
+                        thiSinhId: '14',
+                        like: 1,
+                        sign: sign,
+                        __RequestVerificationToken: antiforgerytoken,
+                    };
+                    $.ajax({
+                        type: "POST",
+                        url: appPath + "Home/ThiSinhLike",
+                        data: input,
+                        cache: false,
+                        xhrFields: {
+                            withCredentials: true
+                        },
+                        success: function (jsonData) {
+                            console.log("ThiSinhLike success");
+                        },
+                        error: function () {
+                            console.log("ThiSinhLike error");
+                        }
+                    });
+                    console.log("đã like rồi");
+                });
+                FB.Event.subscribe("edge.remove", function (o) {
+                    var input = {
+                        thiSinhId: '14',
+                        like: 0,
+                        sign: sign,
+                        __RequestVerificationToken: antiforgerytoken,
+                    };
+                    $.ajax({
+                        type: "POST",
+                        url: appPath + "Home/ThiSinhLike",
+                        data: input,
+                        cache: false,
+                        xhrFields: {
+                            withCredentials: true
+                        },
+                        success: function (jsonData) {
+                            console.log("ThiSinhLike success");
+                        },
+                        error: function () {
+                            console.log("ThiSinhLike error");
+                        }
+                    });
+                    console.log("chưa like đâu");
+                });
+            };
+        </script>
+
+        <input name="__RequestVerificationToken" type="hidden" value="y8FVjeDS4lmBNrIRAlvHorOyenXn7NwHZuz0TiHwv0KDA2A8-3QN0T6JZHaRqvzp2CPSUKdejBvUBycZBRJyA0X8_Kfj8IjZdtTnA8kmoL81" />
+
+        <div class="main-popup ">
+            
+                <a href="http://missteen.vn/danh-sach-thi-sinh-14" class="btn-close"></a>
+            <img src="/Content/images/bg-vong1.png" alt="" class="vong" />
+            <div class="inner-popup">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="like-nv">
+                                <div class="fb-like" data-href="http://missteen.vn/thisinh-14" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true"></div>
+                                <div class="fb-share-button" data-href="http://missteen.vn/thisinh-14" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://missteen.vn/thisinh-14&amp;src=sdkpreparse">Share</a></div>
+                            </div><!-- div.like-nv -->
+                        </div><!-- div.col-md-5 -->
+                    </div><!-- div.row -->
+
+                   
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="main-slider-nv">
+                                <ul class="slider" id="ulImage">
+                                                        <li style="position:relative" data-thumb="http://media.missteen.vn/images/Thumb_26052017120112_2017-05-13 10.15.49 1.jpg" data-position="0">
+                                                            <div class="search" style="position: absolute; top: 10px; left: 10px;">
+                                                                <img style=" position: relative; border: none !important; width:auto" src="/Content/images/icon-zoom.png" id="btnSearch" onclick="CommonCtrl.PopupImg('14',0);" alt="" />
+                                                            </div><!-- div.search -->
+                                                            <img onclick="CommonCtrl.PopupImg('14',0);" src="http://media.missteen.vn/images/Thumb_26052017120112_2017-05-13 10.15.49 1.jpg" style="width:350px;height:350px;" />
+                                                        </li>
+                                                        <li style="position:relative" data-thumb="http://media.missteen.vn/images/Thumb_26052017120221_IMG_20170512_154801_045.jpg" data-position="1">
+                                                            <div class="search" style="position: absolute; top: 10px; left: 10px;">
+                                                                <img style=" position: relative; border: none !important; width:auto" src="/Content/images/icon-zoom.png" id="btnSearch" onclick="CommonCtrl.PopupImg('14',1);" alt="" />
+                                                            </div><!-- div.search -->
+                                                            <img onclick="CommonCtrl.PopupImg('14',1);" src="http://media.missteen.vn/images/Thumb_26052017120221_IMG_20170512_154801_045.jpg" style="width:350px;height:350px;" />
+                                                        </li>
+                                                        <li style="position:relative" data-thumb="http://media.missteen.vn/images/Thumb_26052017123950_20170526_124222.jpg" data-position="2">
+                                                            <div class="search" style="position: absolute; top: 10px; left: 10px;">
+                                                                <img style=" position: relative; border: none !important; width:auto" src="/Content/images/icon-zoom.png" id="btnSearch" onclick="CommonCtrl.PopupImg('14',2);" alt="" />
+                                                            </div><!-- div.search -->
+                                                            <img onclick="CommonCtrl.PopupImg('14',2);" src="http://media.missteen.vn/images/Thumb_26052017123950_20170526_124222.jpg" style="width:350px;height:350px;" />
+                                                        </li>
+                                                        <li style="position:relative" data-thumb="http://media.missteen.vn/images/Thumb_26052017124306_20170526_124337.jpg" data-position="3">
+                                                            <div class="search" style="position: absolute; top: 10px; left: 10px;">
+                                                                <img style=" position: relative; border: none !important; width:auto" src="/Content/images/icon-zoom.png" id="btnSearch" onclick="CommonCtrl.PopupImg('14',3);" alt="" />
+                                                            </div><!-- div.search -->
+                                                            <img onclick="CommonCtrl.PopupImg('14',3);" src="http://media.missteen.vn/images/Thumb_26052017124306_20170526_124337.jpg" style="width:350px;height:350px;" />
+                                                        </li>
+                                                        <li style="position:relative" data-thumb="http://media.missteen.vn/images/Thumb_26052017124315_20170526_124544.jpg" data-position="4">
+                                                            <div class="search" style="position: absolute; top: 10px; left: 10px;">
+                                                                <img style=" position: relative; border: none !important; width:auto" src="/Content/images/icon-zoom.png" id="btnSearch" onclick="CommonCtrl.PopupImg('14',4);" alt="" />
+                                                            </div><!-- div.search -->
+                                                            <img onclick="CommonCtrl.PopupImg('14',4);" src="http://media.missteen.vn/images/Thumb_26052017124315_20170526_124544.jpg" style="width:350px;height:350px;" />
+                                                        </li>
+                                </ul><!-- ul.slider -->
+
+                            </div><!-- div.main-slider-nv -->
+                        </div><!-- div.col-md-5 -->
+
+                        <div class="col-md-8">
+                            <div class="main-info-nv">
+                                <div class="head">
+                                    <div class="trai">
+                                        <div class="tt">L&#234; Th&#249;y Hương</div><!-- div.tt -->
+                                        <div class="sbd">SBD: 000014</div><!-- div.sbd -->
+                                    </div>
+
+                                    <div class="phai">
+                                        <div class="nut-wrap">
+                                            <div   class="nut"
+>
+                                                    <div class="info">
+                                                        <span class="text" id="thisinh_14">759</span>
+                                                        <span class="tim"></span>
+                                                    </div>
+                                            </div> <!-- end nut -->
+                                            
+                                        </div><!-- div.nut-wrap -->
+                                    </div><!-- div.phai -->
+
+                                    <div class="clear"></div>
+                                </div><!-- div.head -->
+
+                                <div class="nd mCustomScrollbar">
+                                    <p class="p">
+                                            <span style="text-transform: capitalize;font-weight:bold;">đồng th&#225;p</span>
+                                        
+                                        <br /> <b>Tuổi:</b> 18
+                                        <br /> <b>Chiều cao:</b> 155cm
+                                    </p>
+                                    <div><b>Thành tích cá nhân</b></div>
+                                    <p>
+Giải Khuyến Khích hội thi chọn học sinh giỏi cấp tỉnh môn Văn năm 2014
+Giải Ba hội thi Văn nghệ Học Đường cấp trường năm 2015
+Giải Khuyến Khích hội thi viết thư quốc tế UPU lần thứ 44 cấp trường năm 2015
+Giải khuyến khích hội thi Hùng Biện cấp trường năm 2016
+Giải Nhất hội thi Văn Nghệ Học Đường cấp trường năm 2016
+Đại diện cho nhãn hàng son tươi Circle                                    </p>
+                                    <p>
+                                        <b>Năng khiếu:</b>
+Ca hát, nhảy múa, chụp ảnh                                     </p>
+                                    <p>
+                                        <b>Sở thích:</b>
+Ca hát                                    </p>
+                                    <p>
+                                        <b>Châm ngôn:</b>
+Đừng xấu hổ khi không biết, chỉ xấu hổ khi không học                                    </p>
+                                    <div><b>Quan điểm</b></div>
+                                    <div class="quo">
+Có lẽ người Việt Nam chúng ta không ai là không được học về đạo đức từ khi đi học vỡ lòng cho tới lúc trưởng thành. Đạo đức với một em bé có khi chỉ là gặp người lớn phải chào, phải lễ phép. Đạo đức với những người con là phải có hiếu với cha mẹ. Đạo đức của người làm quan là phải biết thương dân… có thể nói rằng bất cứ ai, ở đâu và có lẽ chuẩn mực đạo đức là yếu tố cần thiết nhất đối với mỗi con người. Thế nhưng cái mà xã hội ngày nay quan tâm nhất chính là đạo đức của một bộ phận trong xã hội                                     </div><!-- div.quo -->
+                                </div><!-- div.nd -->
+                            </div><!-- div.main-info-nv -->
+                        </div><!-- div.col-md-8 -->
+                    </div><!-- div.row -->
+
+                    <div class="comment-fb">
+                        
+                        <div class="fb-comments" data-href="http://missteen.vn/thisinh-14" data-width="933" data-colorscheme="light" data-numposts="5"></div>
+                    </div><!-- div.comment-fb -->
+
+                </div><!-- div.container -->
+            </div><!-- div.inner-popup -->
+        </div><!-- div.main-popup -->
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog cus400" style="top: 50%;margin: 0;left: 50%;">
+                <!-- Modal content-->
+                <div>
+                    <div style="-webkit-animation: xoay 1s linear infinite;-moz-animation: xoay 1s linear infinite;-o-animation: xoay 1s linear infinite;animation: xoay 1s linear infinite;width: 67px;height: 67px;">
+                        <img src="/Content/images/icon-load.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="/Content/js/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="/Content/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/Content/js/owl.carousel.min.js"></script>
+        <script type="text/javascript" src="/Content/js/lightslider.min.js"></script>
+        <script type="text/javascript" src="/Content/js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script type="text/javascript" src="/Content/js/app.js"></script>
+
+        <script src="/Content/js/facebook.js"></script>
+        <script src="/Content/js/missteen.js"></script>
+
+        <script>
+
+            $('.main-slider-nv .slider').lightSlider({
+                gallery: true,
+                item: 1,
+                thumbItem: 5,
+                slideMargin: 0,
+                speed: 1500,
+                thumbMargin: 5,
+                auto: true,
+                enableDrag: true,
+                loop: true,
+                controls: false,
+                enableTouch: true
+                
+            });
+
+            //function PopupImg(imgsrc) {
+            //    var ua = navigator.userAgent.toLowerCase(); // alert(ua);
+
+            //    if (navigator.userAgent.match("CriOS") || ua.indexOf("ios") > -1 || ua.indexOf("iphone") > -1 || ua.indexOf("ipad") > -1 || ua.indexOf("ipod") > -1 || ua.indexOf("android") > -1) {
+            //    } else {
+            //        var w = window.innerWidth;
+            //        var h = window.innerHeight;
+            //        var n_w = w * 0.9;
+            //        n_w = n_w.toFixed(0);
+            //        var n_h = h * 0.95;
+            //        n_h = n_h.toFixed(0);
+            //        var pop = '<div id="pop_detail" style="width:' + w + 'px; height: ' + h + 'px; top: 0; left:0; z-index: 99999; position: fixed">';
+            //        pop += '<div onclick="closePopImgDetail()" style="width: ' + w + 'px; height: ' + h + 'px; background-color: #282828; opacity: 0.9"></div>';
+            //        pop += '<a href="javascript:;" onclick="closePopImgDetail()" style="top: 10px; right: 10px; float: right; position: absolute;">';
+            //        pop += '<img src="' + appPath + 'Content/images/close.png" /> </a>';
+            //        pop += '<div style="width: ' + n_w + 'px; height: ' + n_h + 'px; top: 50%; left:50%; position: absolute; background-color: black; transform: translate(-50%, -50%)">';
+            //        pop += '<div style="width: ' + n_w + 'px; height: ' + n_h + 'px; position: absolute; float: left; left:0; top:0">';
+            //        pop += '<div style="text-align: center;vertical-align: middle; display: table-cell;width: ' + n_w + 'px;height: ' + n_h + 'px;">';
+            //        pop += '<img src="' + imgsrc + '" style="max-width:' + n_w + 'px; max-height: ' + n_h + 'px" /><br /></div></div>';
+            //        pop += '</div></div>';
+
+            //        $('BODY').append(pop);
+            //        $('BODY').css("overflow", "hidden");
+            //    }
+            //};
+
+            //function closePopImgDetail() {
+            //    document.body.style.overflow = null;
+            //    $("#pop_detail").remove();
+            //}
+
+            //$(document).keyup(function (e) {
+            //    if (e.keyCode == 27) {
+            //        document.body.style.overflow = null;
+            //        $("#pop_detail").remove();
+            //    }
+            //});
+
+            
+        </script>
+
+        <!-- Facebook Pixel Code -->
+        <script>
+            !function (f, b, e, v, n, t, s) {
+                if (f.fbq) return; n = f.fbq = function () {
+                    n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                }; if (!f._fbq) f._fbq = n;
+                n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+                t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+            }(window,
+            document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '360967374099278'); // Insert your pixel ID here.
+            fbq('track', 'PageView');
+        </script>
+        <noscript>
+            <img height="1" width="1" style="display:none"
+                 src="https://www.facebook.com/tr?id=360967374099278&ev=PageView&noscript=1" />
+        </noscript>
+        <!-- DO NOT MODIFY -->
+        <!-- End Facebook Pixel Code -->
+
+    </body>
+</html>

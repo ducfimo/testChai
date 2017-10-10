@@ -1,0 +1,1300 @@
+
+
+<!DOCTYPE html>
+<html class="show-popup" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="/Content/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&amp;subset=vietnamese" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,400i,500,700&amp;subset=vietnamese" rel="stylesheet">
+    <link rel="stylesheet" href="/Content/css/owl.carousel2.css">
+    <link rel="stylesheet" href="/Content/css/lightslider.css">
+    <link rel="stylesheet" href="/Content/css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="/Content/css/style.css">
+    <link href="/Content/css/update.css" rel="stylesheet" />
+    <link href="/Content/css/new-menu.css" rel="stylesheet" />
+    <link href="/Content/css/update_1307.css" rel="stylesheet" />
+
+    <title>Danh sách thí sinh</title>
+    <link rel="icon" href="http://missteen.vn/Content/images/200x200-co-gai.png" style="width:32px;height:32px;">
+    <meta name="Keywords" content="Missteen, Missteen Vietnam, Miss teen Vietnam, Miss tên Viet nam, Missteen 2017, Miss teen 2017, Miss teen" />
+    <meta name="Description" content='Cuộc thi tôn vinh vẻ đẹp các nữ sinh tuổi teen năm 2017' />
+    <meta property="og:title" content="Miss Teen 2017" />
+    <meta property="og:description" content='Cuộc thi tôn vinh vẻ đẹp các nữ sinh tuổi teen năm 2017' />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Miss Teen 2017" />
+    <meta property="og:url" content="http://missteen.vn/danh-sach-thi-sinh" />
+    <meta property="og:image" content="http://missteen.vn/Content/images/470x246.png" />
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="470">
+    <meta property="og:image:height" content="246">
+    <meta property="fb:app_id" content="424754621250874" />
+
+    <script>
+        var appPath = 'http://missteen.vn/';
+        var pos = '1';
+        var miss = '1';
+        var page_content = '1';
+        var id_chk = '0';
+        var key = '';
+        fbAppId = '424754621250874';
+        var sort_type = '0';
+        var sort_asc = '0';
+        var nam_sinh = '1997,1998,1999,2000,2001';
+        var search_type = '1';
+        var search_text = '';
+        var ls_top = '300';
+    </script>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-69155076-37', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+</head>
+<body class="height" id="thi_sinh">
+
+    <input name="__RequestVerificationToken" type="hidden" value="wWighU12tgCn_UV9s5BoZ1eeZZ5f8utZQjJvpnavKPN4eIMt2y947moW-BUGy80Rw8CsKLOSbFn6FYAKITsYmxxzB1U7nsfhCn5UIXt0V7c1" />
+
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9&appId=" + fbAppId;
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <nav class="navbar main-menu menu_inner navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <div id="nav-icon3">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+                <a class="navbar-brand" href="http://missteen.vn/">
+                    <img src="/Content/images/logo.png" class="pc" alt="" />
+                    <img src="/Content/images/logo1.png" class="mobile" alt="" />
+                </a>
+            </div>
+
+            
+            <div class="icon-custom-log">
+                    <a href="javascript:;" onclick="LoginO_Auth('facebook','http://missteen.vn/danh-sach-thi-sinh',0);" class="fb"><img src="http://missteen.vn/Content/images/icon-fb-log.png" alt="" /></a>
+                    <span class="t"></span>
+                <div class="clear"></div>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="http://missteen.vn/">Trang chủ</a></li>
+                    <li><a href="http://missteen.vn/the-le">Thể lệ</a></li>
+                    <li ><a href="http://missteen.vn/danh-sach-thi-sinh">Thí sinh</a></li>
+                    <li   class="active" 
+><a href="http://missteen.vn/top-300">Top 300</a></li>
+                    <li ><a href="http://missteen.vn/top-100">Top 100</a>
+                        <div class="date">16/08</div>
+                    </li>
+                    <li >
+                        <a href="http://missteen.vn/top-18">Top18/Chung kết</a>
+                        <div class="date">26/08</div>
+                    </li>
+                    <li><a href="http://missteen.vn/xep-hang">Xếp hạng</a></li>
+                    <li><a href="http://missteen.vn/tin-tuc">Tin tức</a></li>
+                    <li><a href="http://missteen.vn/lien-he">Liên hệ</a></li>
+                    <li><a href="http://missteen.vn/nha-tai-tro">Tài trợ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="wrap-foot-fixed" data-sticky-container>
+        <div class="main-header-gra">
+            <div class="container">
+                <div class="main-nav-page">
+                    <ul>
+                        <li><a href="http://missteen.vn/">Trang chủ</a></li>
+                        <li><img src="/Content/images/nav-page.png" alt="" /></li>
+                        <li><a href="http://missteen.vn/danh-sach-thi-sinh">Thí sinh</a></li>
+                    </ul>
+                </div>
+
+                <div class="all-main-head">
+                    <div class="trai">
+                            <div class="tt-a" data-text="TOP 300">TOP 300</div>
+                        <div class="search-bar">
+                            <a href="javascript:;" onclick="btnSearchTS();"><img src="/Content/images/icon-search.png" alt="" /></a>
+                            <input id="txtKeyword" type="text" placeholder="Tìm kiếm thí sinh" />
+                        </div>
+                    </div>
+
+                    <div class="phai">
+                        <div class="sl">
+                            Bạn đang xem
+                            <div class="select sothisinh">12</div>
+                            /300 thí sinh
+                        </div>
+
+
+                        <div class="cd-dropdown-wrapper" id="menu_content">
+                            <a class="cd-dropdown-trigger" href="javascript:;">
+                                <span class="img"></span>
+                                <span class="text">Địa chỉ</span>
+                            </a>
+                            <nav class="cd-dropdown">
+                                <h2>Địa chỉ</h2>
+                                <a href="javascript:;" class="cd-close">Close</a>
+                                <ul class="cd-dropdown-content">
+
+                                    <li class="has-children">
+                                        <a href="javascript:;">
+                                            Miền Bắc
+                                            <span class="ts">131 Thí sinh</span>
+                                        </a>
+                                        <ul class="cd-secondary-dropdown is-hidden">
+                                            <li class="go-back"><a href="javascript:;">Miền Bắc</a></li>
+                                                <li class="has-children">
+                                                    <div class="cus-checkbox">
+                                                        <input type="checkbox" name="north_all" id="north_all" value="4,5,6,13,18,22,23,24,26,27,28,31,35,36,37,40,42,44,49,52,54,55,60,62,63"   
+>
+                                                        <label for="north_all">Tất cả</label>
+                                                    </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location1" id="north_4" value="4">
+                                                            <label for="north_4">
+                                                                Bắc Kạn
+                                                                <span class="a">(0)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location1" id="north_5" value="5">
+                                                            <label for="north_5">
+                                                                Bắc Giang
+                                                                <span class="a">(5)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location1" id="north_6" value="6">
+                                                            <label for="north_6">
+                                                                Bắc Ninh
+                                                                <span class="a">(4)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location1" id="north_13" value="13">
+                                                            <label for="north_13">
+                                                                Cao Bằng
+                                                                <span class="a">(0)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location1" id="north_18" value="18">
+                                                            <label for="north_18">
+                                                                Điện Bi&#234;n
+                                                                <span class="a">(0)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location1" id="north_22" value="22">
+                                                            <label for="north_22">
+                                                                H&#224; Giang
+                                                                <span class="a">(0)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location1" id="north_23" value="23">
+                                                            <label for="north_23">
+                                                                H&#224; Nam
+                                                                <span class="a">(1)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location1" id="north_24" value="24">
+                                                            <label for="north_24">
+                                                                H&#224; Nội
+                                                                <span class="a">(69)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location1" id="north_26" value="26">
+                                                            <label for="north_26">
+                                                                Hải Dương
+                                                                <span class="a">(4)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location1" id="north_27" value="27">
+                                                            <label for="north_27">
+                                                                Hải Ph&#242;ng
+                                                                <span class="a">(6)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location1" id="north_28" value="28">
+                                                            <label for="north_28">
+                                                                H&#242;a B&#236;nh
+                                                                <span class="a">(2)</span>
+                                                            </label>
+                                                        </div>
+                                                </li>
+                                                <li class="has-children">
+                                                    <div class="cus-checkbox"></div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location1" id="north_31" value="31">
+                                                            <label for="north_31">
+                                                                Hưng Y&#234;n
+                                                                <span class="a">(4)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location1" id="north_35" value="35">
+                                                            <label for="north_35">
+                                                                Lai Ch&#226;u
+                                                                <span class="a">(0)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location1" id="north_36" value="36">
+                                                            <label for="north_36">
+                                                                L&#224;o Cai
+                                                                <span class="a">(0)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location1" id="north_37" value="37">
+                                                            <label for="north_37">
+                                                                Lạng Sơn
+                                                                <span class="a">(1)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location1" id="north_40" value="40">
+                                                            <label for="north_40">
+                                                                Nam Định
+                                                                <span class="a">(10)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location1" id="north_42" value="42">
+                                                            <label for="north_42">
+                                                                Ninh B&#236;nh
+                                                                <span class="a">(1)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location1" id="north_44" value="44">
+                                                            <label for="north_44">
+                                                                Ph&#250; Thọ
+                                                                <span class="a">(3)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location1" id="north_49" value="49">
+                                                            <label for="north_49">
+                                                                Quảng Ninh
+                                                                <span class="a">(4)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location1" id="north_52" value="52">
+                                                            <label for="north_52">
+                                                                Sơn La
+                                                                <span class="a">(0)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location1" id="north_54" value="54">
+                                                            <label for="north_54">
+                                                                Th&#225;i B&#236;nh
+                                                                <span class="a">(0)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location1" id="north_55" value="55">
+                                                            <label for="north_55">
+                                                                Th&#225;i Nguy&#234;n
+                                                                <span class="a">(7)</span>
+                                                            </label>
+                                                        </div>
+                                                </li>
+                                                    <li class="has-children">
+                                                        <div class="cus-checkbox hidden-md hidden-sm hidden-xs"></div>
+                                                            <div class="cus-checkbox">
+                                                                <input type="checkbox" name="location1" id="north_60" value="60">
+                                                                <label for="north_60">
+                                                                    Tuy&#234;n Quang
+                                                                    <span class="a">(4)</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="cus-checkbox">
+                                                                <input type="checkbox" name="location1" id="north_62" value="62">
+                                                                <label for="north_62">
+                                                                    Vĩnh Ph&#250;c
+                                                                    <span class="a">(3)</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="cus-checkbox">
+                                                                <input type="checkbox" name="location1" id="north_63" value="63">
+                                                                <label for="north_63">
+                                                                    Y&#234;n B&#225;i
+                                                                    <span class="a">(3)</span>
+                                                                </label>
+                                                            </div>
+                                                        
+                                                    </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="has-children">
+                                        <a href="javascript:;">
+                                            Miền Trung
+                                            <span class="ts">73 Thí sinh</span>
+                                        </a>
+                                        <ul class="cd-secondary-dropdown is-two is-hidden">
+                                            <li class="go-back"><a href="javascript:;">Miền Trung</a></li>
+                                                <li class="has-children">
+                                                    <div class="cus-checkbox">
+                                                        <input type="checkbox" name="middle_all" id="middle_all" value="9,11,15,16,17,21,25,32,34,38,41,43,45,46,47,48,50,56,57"   
+>
+                                                        <label for="middle_all">Tất cả</label>
+                                                    </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location2" id="north_9" value="9">
+                                                            <label for="north_9">
+                                                                B&#236;nh Định
+                                                                <span class="a">(6)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location2" id="north_11" value="11">
+                                                            <label for="north_11">
+                                                                B&#236;nh Thuận
+                                                                <span class="a">(1)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location2" id="north_15" value="15">
+                                                            <label for="north_15">
+                                                                Đ&#224; Nẵng
+                                                                <span class="a">(6)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location2" id="north_16" value="16">
+                                                            <label for="north_16">
+                                                                Đắk Lắk
+                                                                <span class="a">(3)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location2" id="north_17" value="17">
+                                                            <label for="north_17">
+                                                                Đắk N&#244;ng
+                                                                <span class="a">(1)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location2" id="north_21" value="21">
+                                                            <label for="north_21">
+                                                                Gia Lai
+                                                                <span class="a">(3)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location2" id="north_25" value="25">
+                                                            <label for="north_25">
+                                                                H&#224; Tĩnh
+                                                                <span class="a">(4)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location2" id="north_32" value="32">
+                                                            <label for="north_32">
+                                                                Kh&#225;nh H&#242;a
+                                                                <span class="a">(6)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location2" id="north_34" value="34">
+                                                            <label for="north_34">
+                                                                Kon Tum
+                                                                <span class="a">(1)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location2" id="north_38" value="38">
+                                                            <label for="north_38">
+                                                                L&#226;m Đồng
+                                                                <span class="a">(8)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location2" id="north_41" value="41">
+                                                            <label for="north_41">
+                                                                Nghệ An
+                                                                <span class="a">(4)</span>
+                                                            </label>
+                                                        </div>
+                                                </li>
+                                                <li class="has-children">
+                                                    <div class="cus-checkbox"></div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location2" id="north_43" value="43">
+                                                            <label for="north_43">
+                                                                Ninh Thuận
+                                                                <span class="a">(1)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location2" id="north_45" value="45">
+                                                            <label for="north_45">
+                                                                Ph&#250; Y&#234;n
+                                                                <span class="a">(1)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location2" id="north_46" value="46">
+                                                            <label for="north_46">
+                                                                Quảng B&#236;nh
+                                                                <span class="a">(2)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location2" id="north_47" value="47">
+                                                            <label for="north_47">
+                                                                Quảng Nam
+                                                                <span class="a">(6)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location2" id="north_48" value="48">
+                                                            <label for="north_48">
+                                                                Quảng Ng&#227;i
+                                                                <span class="a">(2)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location2" id="north_50" value="50">
+                                                            <label for="north_50">
+                                                                Quảng Trị
+                                                                <span class="a">(8)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location2" id="north_56" value="56">
+                                                            <label for="north_56">
+                                                                Thanh H&#243;a
+                                                                <span class="a">(7)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location2" id="north_57" value="57">
+                                                            <label for="north_57">
+                                                                Thừa Thi&#234;n - Huế
+                                                                <span class="a">(3)</span>
+                                                            </label>
+                                                        </div>
+                                                    
+                                                </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="has-children">
+                                        <a href="javascript:;">
+                                            Miền Nam
+                                            <span class="ts">95 Thí sinh</span>
+                                        </a>
+                                        <ul class="cd-secondary-dropdown is-two is-hidden">
+                                            <li class="go-back"><a href="javascript:;">Miền Nam</a></li>
+                                                <li class="has-children">
+                                                    <div class="cus-checkbox">
+                                                        <input type="checkbox" name="south_all" id="south_all" value="1,2,3,7,8,10,12,14,19,20,29,30,33,39,51,53,58,59,61"   
+>
+                                                        <label for="south_all">Tất cả</label>
+                                                    </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location3" id="north_1" value="1">
+                                                            <label for="north_1">
+                                                                An Giang
+                                                                <span class="a">(2)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location3" id="north_2" value="2">
+                                                            <label for="north_2">
+                                                                B&#224; Rịa-Vũng T&#224;u
+                                                                <span class="a">(4)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location3" id="north_3" value="3">
+                                                            <label for="north_3">
+                                                                Bạc Li&#234;u
+                                                                <span class="a">(0)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location3" id="north_7" value="7">
+                                                            <label for="north_7">
+                                                                Bến Tre
+                                                                <span class="a">(2)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location3" id="north_8" value="8">
+                                                            <label for="north_8">
+                                                                B&#236;nh Dương
+                                                                <span class="a">(3)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location3" id="north_10" value="10">
+                                                            <label for="north_10">
+                                                                B&#236;nh Phước
+                                                                <span class="a">(6)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location3" id="north_12" value="12">
+                                                            <label for="north_12">
+                                                                C&#224; Mau
+                                                                <span class="a">(1)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location3" id="north_14" value="14">
+                                                            <label for="north_14">
+                                                                Cần Thơ
+                                                                <span class="a">(5)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location3" id="north_19" value="19">
+                                                            <label for="north_19">
+                                                                Đồng Nai
+                                                                <span class="a">(14)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location3" id="north_20" value="20">
+                                                            <label for="north_20">
+                                                                Đồng Th&#225;p
+                                                                <span class="a">(3)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location3" id="north_29" value="29">
+                                                            <label for="north_29">
+                                                                Hồ Ch&#237; Minh
+                                                                <span class="a">(50)</span>
+                                                            </label>
+                                                        </div>
+                                                </li>
+                                                <li class="has-children">
+                                                    <div class="cus-checkbox"></div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location3" id="north_30" value="30">
+                                                            <label for="north_30">
+                                                                Hậu Giang
+                                                                <span class="a">(0)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location3" id="north_33" value="33">
+                                                            <label for="north_33">
+                                                                Ki&#234;n Giang
+                                                                <span class="a">(1)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location3" id="north_39" value="39">
+                                                            <label for="north_39">
+                                                                Long An
+                                                                <span class="a">(2)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location3" id="north_51" value="51">
+                                                            <label for="north_51">
+                                                                S&#243;c Trăng
+                                                                <span class="a">(0)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location3" id="north_53" value="53">
+                                                            <label for="north_53">
+                                                                T&#226;y Ninh
+                                                                <span class="a">(2)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location3" id="north_58" value="58">
+                                                            <label for="north_58">
+                                                                Tiền Giang
+                                                                <span class="a">(0)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location3" id="north_59" value="59">
+                                                            <label for="north_59">
+                                                                Tr&#224; Vinh
+                                                                <span class="a">(0)</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cus-checkbox">
+                                                            <input type="checkbox" name="location3" id="north_61" value="61">
+                                                            <label for="north_61">
+                                                                Vĩnh Long
+                                                                <span class="a">(0)</span>
+                                                            </label>
+                                                        </div>
+                                                    
+                                                </li>
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <a href="http://missteen.vn/tim-kiem?kw=64&MissID=&sortType=0&sortAsc=1&namSinh=&searchType=4&ls_top=300">
+                                            Khác
+                                            <span class="ts">1 Thí sinh</span>
+                                        </a>
+                                        
+                                    </li>
+
+                                </ul>
+                            </nav>
+                        </div>
+
+
+                    </div><!-- div.phai -->
+                    <div class="clear"></div>
+
+                    <div class="logo-toa">
+                        <img src="/Content/images/logo-dream.png" alt="" />
+                    </div><!-- div.logo-toa -->
+                </div><!-- div.all-main-head -->
+            </div>
+        </div><!-- div.main-header-gra -->
+
+        <div class="main-list-thisinh">
+            <div class="container">
+                <div class="row" id="danhsach_thisinh">
+                            <div class="col-md-3 col-xs-6">
+                                <div id="thisinh_voted_1093"   class="thisinh fix-pd bgk" 
+>
+                                    <div class="sbd">
+                                        <div class="trai">
+                                            SBD: 001093
+                                        </div>
+                                        <div class="phai">
+                                            <div class="vot">
+                                                <span>VOTE: 727</span>
+                                                <div class="tim"></div><!-- div.tim -->
+                                            </div><!-- div.vot -->
+                                        </div><!-- div.phai -->
+                                    </div><!-- div.sbd -->
+                                    <div class="img">
+                                        
+                                            <a href="http://missteen.vn/thisinh-1093">
+                                                    <img src="http://media.missteen.vn/images/16082017164214_DSC_2629.jpg.224.224.cache" alt="" />
+                                            </a>
+                                    </div>
+                                    <div class="content disablehover">
+                                        <div class="tt">
+                                            
+                                                <a href="http://missteen.vn/thisinh-1093">mai th&#249;y linh</a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <div id="thisinh_voted_1854"   class="thisinh fix-pd"
+>
+                                    <div class="sbd">
+                                        <div class="trai">
+                                            SBD: 001854
+                                        </div>
+                                        <div class="phai">
+                                            <div class="vot">
+                                                <span>VOTE: 455</span>
+                                                <div class="tim"></div><!-- div.tim -->
+                                            </div><!-- div.vot -->
+                                        </div><!-- div.phai -->
+                                    </div><!-- div.sbd -->
+                                    <div class="img">
+                                        
+                                            <a href="http://missteen.vn/thisinh-1854">
+                                                    <img src="http://media.missteen.vn/images/10072017140434_1.jpeg.224.224.cache" alt="" />
+                                            </a>
+                                    </div>
+                                    <div class="content disablehover">
+                                        <div class="tt">
+                                            
+                                                <a href="http://missteen.vn/thisinh-1854">ho&#224;ng kim ng&#226;n</a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <div id="thisinh_voted_1926"   class="thisinh fix-pd bgk" 
+>
+                                    <div class="sbd">
+                                        <div class="trai">
+                                            SBD: 001926
+                                        </div>
+                                        <div class="phai">
+                                            <div class="vot">
+                                                <span>VOTE: 10</span>
+                                                <div class="tim"></div><!-- div.tim -->
+                                            </div><!-- div.vot -->
+                                        </div><!-- div.phai -->
+                                    </div><!-- div.sbd -->
+                                    <div class="img">
+                                        
+                                            <a href="http://missteen.vn/thisinh-1926">
+                                                    <img src="http://media.missteen.vn/images/12072017133853_2.jpg.224.224.cache" alt="" />
+                                            </a>
+                                    </div>
+                                    <div class="content disablehover">
+                                        <div class="tt">
+                                            
+                                                <a href="http://missteen.vn/thisinh-1926">h&#224; thị h&#224; chi </a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <div id="thisinh_voted_94"   class="thisinh fix-pd"
+>
+                                    <div class="sbd">
+                                        <div class="trai">
+                                            SBD: 000094
+                                        </div>
+                                        <div class="phai">
+                                            <div class="vot">
+                                                <span>VOTE: 636</span>
+                                                <div class="tim"></div><!-- div.tim -->
+                                            </div><!-- div.vot -->
+                                        </div><!-- div.phai -->
+                                    </div><!-- div.sbd -->
+                                    <div class="img">
+                                        
+                                            <a href="http://missteen.vn/thisinh-94">
+                                                    <img src="http://media.missteen.vn/images/16082017184815_IMG_0658v.jpg.224.224.cache" alt="" />
+                                            </a>
+                                    </div>
+                                    <div class="content disablehover">
+                                        <div class="tt">
+                                            
+                                                <a href="http://missteen.vn/thisinh-94">nguyễn thị kh&#225;nh mi</a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <div id="thisinh_voted_120"   class="thisinh fix-pd"
+>
+                                    <div class="sbd">
+                                        <div class="trai">
+                                            SBD: 000120
+                                        </div>
+                                        <div class="phai">
+                                            <div class="vot">
+                                                <span>VOTE: 1578</span>
+                                                <div class="tim"></div><!-- div.tim -->
+                                            </div><!-- div.vot -->
+                                        </div><!-- div.phai -->
+                                    </div><!-- div.sbd -->
+                                    <div class="img">
+                                        
+                                            <a href="http://missteen.vn/thisinh-120">
+                                                    <img src="http://media.missteen.vn/images/02072017001213_thuhien3.jpg.224.224.cache" alt="" />
+                                            </a>
+                                    </div>
+                                    <div class="content disablehover">
+                                        <div class="tt">
+                                            
+                                                <a href="http://missteen.vn/thisinh-120">mai thị thu hiền</a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <div id="thisinh_voted_1050"   class="thisinh fix-pd"
+>
+                                    <div class="sbd">
+                                        <div class="trai">
+                                            SBD: 001050
+                                        </div>
+                                        <div class="phai">
+                                            <div class="vot">
+                                                <span>VOTE: 1011</span>
+                                                <div class="tim"></div><!-- div.tim -->
+                                            </div><!-- div.vot -->
+                                        </div><!-- div.phai -->
+                                    </div><!-- div.sbd -->
+                                    <div class="img">
+                                        
+                                            <a href="http://missteen.vn/thisinh-1050">
+                                                    <img src="http://media.missteen.vn/images/16082017172115_IMG_2383.jpg.224.224.cache" alt="" />
+                                            </a>
+                                    </div>
+                                    <div class="content disablehover">
+                                        <div class="tt">
+                                            
+                                                <a href="http://missteen.vn/thisinh-1050">trần thị b&#237;ch ngọc</a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <div id="thisinh_voted_991"   class="thisinh fix-pd"
+>
+                                    <div class="sbd">
+                                        <div class="trai">
+                                            SBD: 000991
+                                        </div>
+                                        <div class="phai">
+                                            <div class="vot">
+                                                <span>VOTE: 1399</span>
+                                                <div class="tim"></div><!-- div.tim -->
+                                            </div><!-- div.vot -->
+                                        </div><!-- div.phai -->
+                                    </div><!-- div.sbd -->
+                                    <div class="img">
+                                        
+                                            <a href="http://missteen.vn/thisinh-991">
+                                                    <img src="http://media.missteen.vn/images/13072017164034_Screenshot_12.png.224.224.cache" alt="" />
+                                            </a>
+                                    </div>
+                                    <div class="content disablehover">
+                                        <div class="tt">
+                                            
+                                                <a href="http://missteen.vn/thisinh-991">trần thị kiều my</a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <div id="thisinh_voted_1950"   class="thisinh fix-pd"
+>
+                                    <div class="sbd">
+                                        <div class="trai">
+                                            SBD: 001950
+                                        </div>
+                                        <div class="phai">
+                                            <div class="vot">
+                                                <span>VOTE: 459</span>
+                                                <div class="tim"></div><!-- div.tim -->
+                                            </div><!-- div.vot -->
+                                        </div><!-- div.phai -->
+                                    </div><!-- div.sbd -->
+                                    <div class="img">
+                                        
+                                            <a href="http://missteen.vn/thisinh-1950">
+                                                    <img src="http://media.missteen.vn/images/12072017111511_1.jpeg.224.224.cache" alt="" />
+                                            </a>
+                                    </div>
+                                    <div class="content disablehover">
+                                        <div class="tt">
+                                            
+                                                <a href="http://missteen.vn/thisinh-1950">phạm t&#244; phương anh</a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <div id="thisinh_voted_18"   class="thisinh fix-pd"
+>
+                                    <div class="sbd">
+                                        <div class="trai">
+                                            SBD: 000018
+                                        </div>
+                                        <div class="phai">
+                                            <div class="vot">
+                                                <span>VOTE: 456</span>
+                                                <div class="tim"></div><!-- div.tim -->
+                                            </div><!-- div.vot -->
+                                        </div><!-- div.phai -->
+                                    </div><!-- div.sbd -->
+                                    <div class="img">
+                                        
+                                            <a href="http://missteen.vn/thisinh-18">
+                                                    <img src="http://media.missteen.vn/images/Thumb_26052017220042_FB_IMG_1489417121240.jpg.224.224.cache" alt="" />
+                                            </a>
+                                    </div>
+                                    <div class="content disablehover">
+                                        <div class="tt">
+                                            
+                                                <a href="http://missteen.vn/thisinh-18">lữ ngọc quy&#234;n</a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <div id="thisinh_voted_897"   class="thisinh fix-pd"
+>
+                                    <div class="sbd">
+                                        <div class="trai">
+                                            SBD: 000897
+                                        </div>
+                                        <div class="phai">
+                                            <div class="vot">
+                                                <span>VOTE: 1320</span>
+                                                <div class="tim"></div><!-- div.tim -->
+                                            </div><!-- div.vot -->
+                                        </div><!-- div.phai -->
+                                    </div><!-- div.sbd -->
+                                    <div class="img">
+                                        
+                                            <a href="http://missteen.vn/thisinh-897">
+                                                    <img src="http://media.missteen.vn/images/27062017092844_srv_thumb (8).jpg.224.224.cache" alt="" />
+                                            </a>
+                                    </div>
+                                    <div class="content disablehover">
+                                        <div class="tt">
+                                            
+                                                <a href="http://missteen.vn/thisinh-897">đỗ thị kim thoa</a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <div id="thisinh_voted_1342"   class="thisinh fix-pd bgk" 
+>
+                                    <div class="sbd">
+                                        <div class="trai">
+                                            SBD: 001342
+                                        </div>
+                                        <div class="phai">
+                                            <div class="vot">
+                                                <span>VOTE: 117</span>
+                                                <div class="tim"></div><!-- div.tim -->
+                                            </div><!-- div.vot -->
+                                        </div><!-- div.phai -->
+                                    </div><!-- div.sbd -->
+                                    <div class="img">
+                                        
+                                            <a href="http://missteen.vn/thisinh-1342">
+                                                    <img src="http://media.missteen.vn/images/16082017173934_IMG_0453v.jpg.224.224.cache" alt="" />
+                                            </a>
+                                    </div>
+                                    <div class="content disablehover">
+                                        <div class="tt">
+                                            
+                                                <a href="http://missteen.vn/thisinh-1342">nguyễn thị hồng ngọc</a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <div id="thisinh_voted_927"   class="thisinh fix-pd"
+>
+                                    <div class="sbd">
+                                        <div class="trai">
+                                            SBD: 000927
+                                        </div>
+                                        <div class="phai">
+                                            <div class="vot">
+                                                <span>VOTE: 1187</span>
+                                                <div class="tim"></div><!-- div.tim -->
+                                            </div><!-- div.vot -->
+                                        </div><!-- div.phai -->
+                                    </div><!-- div.sbd -->
+                                    <div class="img">
+                                        
+                                            <a href="http://missteen.vn/thisinh-927">
+                                                    <img src="http://media.missteen.vn/images/26062017214126_srv_thumb (1).jpg.224.224.cache" alt="" />
+                                            </a>
+                                    </div>
+                                    <div class="content disablehover">
+                                        <div class="tt">
+                                            
+                                                <a href="http://missteen.vn/thisinh-927">nguyễn hồ minh thư</a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                </div><!-- div.row -->
+            </div>
+        </div><!-- div.main-list-thisinh -->
+
+        <div class="main-loadmore" id="loading_icon" hidden>
+            <div class="container">
+                <div class="img">
+                    <img src="/Content/images/icon-load.png" alt="" />
+                </div>
+                <div class="tt">Tải thêm</div>
+            </div>
+        </div>
+    </div><!-- div.wrap-foot-fixed -->
+
+    <div class="foot-fixed">
+        <div class="container">
+            
+
+            <div class="wrap-new-filter">
+                <div class="new-filter">
+                    <div class="button-click">
+                        <span><img src="/Content/images/icon-search.png" alt="" /></span>
+                        <div class="caret"></div><!-- div.caret -->
+                    </div><!-- div.button-click -->
+                    <div class="drop">
+                        <ul>
+                            <li data-text="Họ tên, Số báo danh" data-id="1" id="searchType1"   class="choose"
+>Tìm theo tên, Số báo danh</li>
+                            <li data-text="Tỉnh/Thành phố" data-id="3" id="searchType2" >Tìm theo Tỉnh/Thành phố</li>
+                        </ul>
+                    </div><!-- div.drop -->
+                </div><!-- div.new-filter -->
+                <div class="search">
+                    <input type="text" id="txtKeyword1" value=""   placeholder="Họ tên, Số báo danh"
+>
+                </div>
+                <div class="clear"></div>
+            </div><!-- div.wrap-new-filter -->
+            <div class="wrap-new-filter">
+                <div class="new-filter custom">
+                    <div class="button-click">
+                        <span><img src="/Content/images/icon-fil.png" alt="" /></span>
+                        <div class="caret"></div><!-- div.caret -->
+                    </div><!-- div.button-click -->
+                    <div class="drop">
+                        <ul>
+                            <li class="fil cus-drop">
+                                <div class="text" id="do_tuoi">Tìm theo Độ tuổi</div><!-- div.text --> 
+                                <div class="icon"></div><!-- div.icon -->
+                                <ul>
+                                    
+                                    <li>
+                                        <div class="cus-checkbox">
+                                           <input type="checkbox" id="n1" value="1997,1998"   checked
+ /> 
+                                            
+                                            <label for="n1">Sinh năm 1998</label>
+                                        </div><!-- div.cus-checkbox -->
+                                    </li>
+                                    <li>
+                                        <div class="cus-checkbox">
+                                            <input type="checkbox" id="n2" value="1999"   checked
+ />
+                                            
+                                            <label for="n2">Sinh năm 1999</label>
+                                        </div><!-- div.cus-checkbox -->
+                                    </li>
+                                    <li>
+                                        <div class="cus-checkbox">
+                                                <input type="checkbox" id="n3" value="2000"   checked
+ />
+                                            
+                                            <label for="n3">Sinh năm 2000</label>
+                                        </div><!-- div.cus-checkbox -->
+                                    </li>
+                                    <li>
+                                        <div class="cus-checkbox">
+                                                <input type="checkbox" id="n4" value="2001"   checked
+ />
+                                            
+                                            <label for="n4">Sinh năm 2001</label>
+                                        </div><!-- div.cus-checkbox -->
+                                    </li>
+                                </ul>
+                            </li>
+
+                                <li onclick="btnSearchTS1(8,0);"   class="desc fil"
+>
+                                    <div class="text">Xếp theo Khán giả bình chọn</div>
+                                    <div class="icon"></div><!-- div.icon -->
+                                </li>
+                                <li onclick="btnSearchTS1(9,0);"   class="desc fil"
+>
+                                    <div class="text">Xếp theo BGK bình chọn</div>
+                                    <div class="icon"></div><!-- div.icon -->
+                                </li>
+
+                            <li onclick="btnSearchTS1(6,0);"   class="desc fil"
+>
+                                <div class="text">Xếp theo Mới nhất</div>
+                                <div class="icon"></div><!-- div.icon -->
+                            </li>
+
+                            <li onclick="btnSearchTS1(6,1);"   class="fil"
+>
+                                <div class="text">Xếp theo Cũ nhất</div>
+                                <div class="icon"></div><!-- div.icon -->
+                            </li>
+                            <li onclick="btnSearchTS1(3,0);"   class="desc fil"
+>
+                                <div class="text">Xếp theo Bình chọn giảm dần</div>
+                                <div class="icon"></div><!-- div.icon -->
+                            </li>
+                            <li onclick="btnSearchTS1(3,1);"   class="fil"
+>
+                                <div class="text">Xếp theo Bình chọn tăng dần</div>
+                                <div class="icon"></div><!-- div.icon -->
+                            </li>
+                            <li onclick="btnSearchTS1(4,0);"   class="desc fil"
+>
+                                <div class="text">Xếp theo Like, Share giảm dần</div><!-- div.text -->
+                                <div class="icon"></div><!-- div.icon -->
+                            </li>
+                            <li onclick="btnSearchTS1(4,1);"   class="fil"
+>
+                                <div class="text">Xếp theo Like, Share tăng dần</div><!-- div.text -->
+                                <div class="icon"></div><!-- div.icon -->
+                            </li>
+                            
+                            <li onclick="btnSearchTS1(1,0);"   class="desc fil"
+>
+                                <div class="text">Xếp theo Số báo danh giảm dần</div>
+                                <div class="icon"></div><!-- div.icon -->
+                            </li>
+                            <li onclick="btnSearchTS1(1,1);"   class="fil"
+>
+                                <div class="text">Xếp theo Số báo danh tăng dần</div>
+                                <div class="icon"></div><!-- div.icon -->
+                            </li>
+                        </ul>
+                    </div><!-- div.drop -->
+                </div><!-- div.new-filter -->
+                <div class="clear"></div>
+            </div><!-- div.wrap-new-filter -->
+
+            <div class="sl">
+                <i>Bạn đang xem </i>
+                <span class="sothisinh">12</span>
+                /300 <i>thí sinh</i>
+            </div>
+        </div>
+    </div> <!-- end foot-fixed -->
+
+    <div class="wraper-footer cus">
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="trai">
+                            <a href="https://vtcgame.vn/"><img src="/Content/images/logo-vtc.png" alt="" /></a>
+                            <span>Copyright (C) 2017. All rights reserved.</span>
+                        </div>
+                    </div><!-- div.col-sm-6 -->
+
+                    <div class="col-sm-6">
+                        <div class="phai">
+                            <span>Email: missteen2017@vtc.vn | Hotline: 19001530</span>
+                            <ul>
+                                <li><a href="https://www.facebook.com/missteenvietnam/"><img src="/Content/images/icon-s1.png" alt="" /></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCTlQeU3-__foZB0Sj-muXDQ?sub_confirmation=1"><img src="/Content/images/icon-s2.png" alt="" /></a></li>
+                                <li><a href="http://zalo.me/1314724753681766709"><img src="/Content/images/icon-s3.png" alt="" /></a></li>
+                            </ul>
+                        </div><!-- div.phai -->
+                    </div><!-- div.col-sm-6 -->
+                </div><!-- div.row -->
+            </div>
+        </div><!-- div.footer -->
+    </div><!-- div.wraper-footer -->
+
+    <div class="wrap_uptop">
+        <div class="container">
+            <div class="inner_up">
+                <div class="uptop">
+                    <img src="/Content/images/icon-uptop.png" alt="" />
+                </div><!-- div.uptop -->
+            </div><!-- div.inner_up -->
+        </div>
+    </div><!-- div.wrap_uptop -->
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog cus400" style="top: 50%;margin: 0;left: 50%;display: inline-block;width: auto;transform: translate(-50%,-50%);position: absolute;">
+            <!-- Modal content-->
+            <div style="display: inline-block;background: #fbfbfb;padding: 5px 29px;border-radius: 8px;">
+                <div style="-webkit-animation: xoay 1s linear infinite;-moz-animation: xoay 1s linear infinite;-o-animation: xoay 1s linear infinite;animation: xoay 1s linear infinite;width: 67px;height: 67px;">
+                    <img src="/Content/images/icon-load.png" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/Content/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/Content/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/Content/js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="/Content/js/lightslider.min.js"></script>
+    <script type="text/javascript" src="/Content/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="/Content/js/app.js"></script>
+    <script src="/Content/js/update.js"></script>
+    <script src="/Content/js/jquery.menu-aim.js"></script>
+    <script src="/Content/js/main.js"></script>
+
+    
+    <script src="/Content/js/facebook.js"></script>
+    <script src="/Content/js/missteen.js"></script>
+
+    <script>
+        $('.main-slider-nv .slider').lightSlider({
+            gallery: true,
+            item: 1,
+            thumbItem: 5,
+            slideMargin: 0,
+            speed: 500,
+            thumbMargin: 10,
+            auto: true,
+            enableDrag: false,
+            loop: true,
+            controls: false,
+            enableTouch: false
+        });
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            }; if (!f._fbq) f._fbq = n;
+            n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+        }(window,
+        document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '360967374099278'); // Insert your pixel ID here.
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+             src="https://www.facebook.com/tr?id=360967374099278&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- DO NOT MODIFY -->
+    <!-- End Facebook Pixel Code -->
+
+</body>
+</html>

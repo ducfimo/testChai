@@ -1,4 +1,5 @@
 const expect = require('chai').expect
+const sinon = require('sinon')
 
 function PTBac2(a, b, c) {
 	let delta = b*b - 4*a*c
