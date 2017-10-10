@@ -13,11 +13,21 @@ const BODY_14 = fs.readFileSync(__dirname + '/missteen/14.html').toString()
 const BODY_HOME = fs.readFileSync(__dirname + '/missteen/home.html').toString()
 let stub = sinon.stub(getInformation, 'getHTML')
 stub.withArgs(14).returns(Promise.resolve(BODY_14))
-stub.withArgs(13).returns(Promise.resolve(BODY_HOME))
+stub.withArgs(13).resolves(BODY_HOME)
 
 // fake mongodb.find()
 let stub1 = sinon.stub(mongodb, 'find')
-stub1.withArgs('missteen', 'thisinh', {SBD: 14}).returns(Promise.resolve([OBJ14]))
+stub1.withArgs('missteen', 'thisinh', {SBD: 14}).resolves([OBJ14])
+
+// mongodb.find()
+/*describe('find()', () => {
+	it('should return [OBJ14]', () => {
+		return mongodb.find('missteen', 'thisinh', {SBD: 14})
+		.then( result => {
+			expect(result).to.deep.equal([OBJ14])
+		})
+	})
+})*/
 
 // getInformation.readHTML()
 describe('readHTML()', () => {
@@ -39,38 +49,38 @@ describe('readHTML()', () => {
 // STR.standardize(string)
 describe('standardize()', () => {
 	it('Xoa khoang trang o dau', () => {
-		expect(STR.standardize('  \n	\nha noi')).to.equal('ha noi')
+		expect(STR.standardize(' \n \t\nhồ chí minh')).to.equal('hồ chí minh')
 	})
 	it('Xoa khoang trang o cuoi', () => {
-		expect(STR.standardize('ha noi\n \n 		')).to.equal('ha noi')
+		expect(STR.standardize('hồ chí minh\t\n  \t')).to.equal('hồ chí minh')
 	})
 	it('Thay the khoang trang giua cac tu bang 1 dau cach duy nhat', () => {
-		expect(STR.standardize('ha \n 		\nnoi')).to.equal('ha noi')
+		expect(STR.standardize('hồ \n chí \t \tminh')).to.equal('hồ chí minh')
 	})
 })
 
 // STR.standardizeName()
 describe('standardizeName()', () => {
 	it('Xoa khoang trang o dau', () => {
-		expect(STR.standardizeName('  \t\n Ha Noi')).to.equal('Ha Noi')
+		expect(STR.standardizeName('  \t\n Hồ Chí Minh')).to.equal('Hồ Chí Minh')
 	})
 	it('Xoa khoang trang o cuoi', () => {
-		expect(STR.standardizeName('Ha Noi\n \n \t')).to.equal('Ha Noi')
+		expect(STR.standardizeName('Hồ Chí Minh\n \n \t')).to.equal('Hồ Chí Minh')
 	})
 	it('Thay the khoang trang giua cac tu bang 1 dau cach duy nhat', () => {
-		expect(STR.standardizeName('Ha \n \t\t	\nNoi')).to.equal('Ha Noi')
+		expect(STR.standardizeName('Hồ \n \tChí  \tMinh')).to.equal('Hồ Chí Minh')
 	})
 	it('Viet hoa chu cai dau moi tu', () => {
-		expect(STR.standardizeName('ha noi')).to.equal('Ha Noi')
+		expect(STR.standardizeName('hồ chí minh')).to.equal('Hồ Chí Minh')
 	})
 	it('Viet thuong chu cai khong bat dau mot tu', () => {
-		expect(STR.standardizeName('HA NoI')).to.equal('Ha Noi')
+		expect(STR.standardizeName('HỒ ChÍ MiNH')).to.equal('Hồ Chí Minh')
 	})
 })
 
 // STR.removeVietnamese()
 describe('removeVietnamese()', () => {
 	it('Bo dau tieng Viet', () => {
-		expect(STR.removeVietnamese(' \n hà\t nội ')).to.equal(' \n ha\t noi ')
+		expect(STR.removeVietnamese(' \n hỒ\t cHí Minh ')).to.equal(' \n hO\t cHi Minh ')
 	})
 })
