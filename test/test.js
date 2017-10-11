@@ -6,11 +6,11 @@ const STR = require('../module/string')
 const getInformation = require('../module/getInformation')
 const mongodb = require('../module/mongodb')
 
-const OBJ14 = JSON.parse(fs.readFileSync(__dirname + '/missteen/obj14.json').toString())
+const OBJ14 = JSON.parse(fs.readFileSync(__dirname + '/data/obj14.json').toString())
 
 // Fake getInformation.getHTML()
-const BODY_14 = fs.readFileSync(__dirname + '/missteen/14.html').toString()
-const BODY_HOME = fs.readFileSync(__dirname + '/missteen/home.html').toString()
+const BODY_14 = fs.readFileSync(__dirname + '/data/14.html').toString()
+const BODY_HOME = fs.readFileSync(__dirname + '/data/home.html').toString()
 let stub = sinon.stub(getInformation, 'getHTML')
 stub.withArgs(14).returns(Promise.resolve(BODY_14))
 stub.withArgs(13).resolves(BODY_HOME)
@@ -20,14 +20,14 @@ let stub1 = sinon.stub(mongodb, 'find')
 stub1.withArgs('missteen', 'thisinh', {SBD: 14}).resolves([OBJ14])
 
 // mongodb.find()
-describe('find()', () => {
+/*describe('find()', () => {
 	it('should return [OBJ14]', () => {
 		return mongodb.find('missteen', 'thisinh', {SBD: 14})
 			.then( result => {
 				expect(result).to.deep.equal([OBJ14])
 			})
 	})
-})
+})*/
 
 // getInformation.readHTML()
 describe('readHTML()', () => {
