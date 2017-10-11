@@ -27,23 +27,27 @@ app.get('/ten/:Ten', (req, res) => {
 	let Ten = req.params.Ten
 	let cond = makeOrCondition({Ten})
 	if (cond.$or.length==0) res.send({error:false, data:[]})
-	else MDB.find(DATABASE, COLLECTION, cond).then( (results) => {
-		res.send({error:false, data:results})
-	}).catch( (e) => {
-		res.send({error:true})
-		console.log(e)
-	})
+	else {
+		MDB.find(DATABASE, COLLECTION, cond).then( (results) => {
+			res.send({error:false, data:results})
+		}).catch( (e) => {
+			res.send({error:true})
+			console.log(e)
+		})
+	}
 })
 
 app.post('/search', (req, res) => {
 	let cond = makeOrCondition(req.body)
 	if (cond.$or.length==0) res.send({error:false, data:[]})
-	else MDB.find(DATABASE, COLLECTION, cond).then( (results) => {
-		res.send({error:false, data:results})
-	}).catch( (e) => {
-		res.send({error:true})
-		console.log(e)
-	})
+	else {
+		MDB.find(DATABASE, COLLECTION, cond).then( (results) => {
+			res.send({error:false, data:results})
+		}).catch( (e) => {
+			res.send({error:true})
+			console.log(e)
+		})
+	}
 })
 
 function makeOrCondition(body) {

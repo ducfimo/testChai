@@ -8,7 +8,7 @@ const SBD_MIN = 1  // 14
 const SBD_MAX = 0  // 2063
 
 let j = 0
-for (let i=SBD_MIN;i<=SBD_MAX;i++) 
+for (let i=SBD_MIN;i<=SBD_MAX;i++) {
 	getInformation.getHTML(i)
 		.then( body => {
 			return getInformation.readHTML(body)
@@ -25,3 +25,4 @@ for (let i=SBD_MIN;i<=SBD_MAX;i++)
 		.catch( (e) => {
 			console.log(`i = ${i}`, e)
 		})
+}

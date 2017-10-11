@@ -28,6 +28,6 @@ module.exports = {
         "no-console": "off",
         "keyword-spacing" : "error",
         "space-before-blocks": "error",
-        "curly": ["error","multi"],
+        "curly": ["error","multi-or-nest"]
     }
 };
