@@ -1,10 +1,10 @@
 const expect = require('chai').expect
-const sinon = require('sinon')
+//const sinon = require('sinon')
 
 function PTBac2(a, b, c) {
 	let delta = b*b - 4*a*c
-	if(delta<0) return {soNghiem: 0, nghiem: []}
-	if(delta==0) return {soNghiem: 1, nghiem: [-b/(2*a)]}
+	if (delta<0) return {soNghiem: 0, nghiem: []}
+	if (delta==0) return {soNghiem: 1, nghiem: [-b/(2*a)]}
 	let temp = Math.sqrt(delta)
 	let x1 = (-b - temp)/(2*a)
 	let x2 = (-b + temp)/(2*a)

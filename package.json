@@ -15,7 +15,6 @@
     "jsdom": "^11.2.0",
     "mocha": "^4.0.1",
     "mongodb": "^2.2.31",
-    "object.entries": "^1.0.4",
     "request": "^2.81.0",
     "request-promise": "^4.2.1",
     "sinon": "^4.0.1"

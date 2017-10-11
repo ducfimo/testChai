@@ -16,7 +16,7 @@ const 	OBJ = {
 
 const removeVietnamese = str => {
 	let result = str
-	for(let key in OBJ)
+	for (let key in OBJ)
 		OBJ[key].forEach( element => {
 			result = result.replace(new RegExp(element, 'g'), key)
 		})
@@ -24,16 +24,16 @@ const removeVietnamese = str => {
 }
 
 const toVietnamese = str => {
-	if(str.length==0) return []
-	if(str.length==1) {
-		if(OBJ[str]) return OBJ[str]
+	if (str.length==0) return []
+	if (str.length==1) {
+		if (OBJ[str]) return OBJ[str]
 		return [str]
 	}
 	let arr1 = toVietnamese(str.charAt(0))
 	let arr2 = toVietnamese(str.substring(1))
 	let result = []
-	for(let s1 of arr1)
-		for(let s2 of arr2)
+	for (let s1 of arr1)
+		for (let s2 of arr2)
 			result.push(s1 + s2)
 	return result
 }

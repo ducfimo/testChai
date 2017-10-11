@@ -20,29 +20,29 @@ let stub1 = sinon.stub(mongodb, 'find')
 stub1.withArgs('missteen', 'thisinh', {SBD: 14}).resolves([OBJ14])
 
 // mongodb.find()
-/*describe('find()', () => {
+describe('find()', () => {
 	it('should return [OBJ14]', () => {
 		return mongodb.find('missteen', 'thisinh', {SBD: 14})
-		.then( result => {
-			expect(result).to.deep.equal([OBJ14])
-		})
+			.then( result => {
+				expect(result).to.deep.equal([OBJ14])
+			})
 	})
-})*/
+})
 
 // getInformation.readHTML()
 describe('readHTML()', () => {
 	it('should return 0', () => {
 		return getInformation.getHTML(13)
-		.then( body => {
-			expect(getInformation.readHTML(body)).to.equal(0)
-		})
+			.then( body => {
+				expect(getInformation.readHTML(body)).to.equal(0)
+			})
 	})
 	it('should return an object', () => {
 		return getInformation.getHTML(14)
-		.then( body => {
-			expect(getInformation.readHTML(body)).to.be.an('object')
-			expect(getInformation.readHTML(body)).to.deep.equal(OBJ14)
-		})
+			.then( body => {
+				expect(getInformation.readHTML(body)).to.be.an('object')
+				expect(getInformation.readHTML(body)).to.deep.equal(OBJ14)
+			})
 	})
 })
 
